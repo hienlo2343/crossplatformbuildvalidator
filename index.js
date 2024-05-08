@@ -1,12 +1,6 @@
-function isValidParentheses(s) {
-  const stack = [];
-  const map = { "(": ")", "[": "]", "{": "}" };
-  for (const char of s) {
-    if (char in map) stack.push(char);
-    else {
-      const top = stack.pop();
-      if (map[top] !== char) return false;
-    }
+const gcd = (a, b) => {
+  if (b === 0) {
+    return a;
   }
-  return stack.length === 0;
-}
+  return gcd(b, a % b);
+};
