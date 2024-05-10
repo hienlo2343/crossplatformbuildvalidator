@@ -1,6 +1,13 @@
-const gcd = (a, b) => {
-  if (b === 0) {
-    return a;
-  }
-  return gcd(b, a % b);
+const bubbleSortOptimized = (arr) => {
+  let swapped;
+  do {
+    swapped = false;
+    for (let i = 0; i < arr.length - 1; i++) {
+      if (arr[i] > arr[i + 1]) {
+        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+        swapped = true;
+      }
+    }
+  } while (swapped);
+  return arr;
 };
