@@ -1,4 +1,4 @@
-const binarySearch = (arr, target) => {
+const binarySearchIterative = (arr, target) => {
   let left = 0;
   let right = arr.length - 1;
   while (left <= right) {
